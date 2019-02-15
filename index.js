@@ -24,7 +24,7 @@ flipButton.onclick = function flipCard() {
 const form = document.querySelector(`form`);
 const questionField = document.querySelector(`#question`);
 const answerField = document.querySelector(`#answer`);
-const deleteButton = document.querySelector(`delete`);
+const deleteButton = document.querySelector(`#delete`);
 
 const createCard = () => {
     let card = {};
@@ -40,3 +40,10 @@ form.addEventListener(`submit`, (event) => {
     console.log(data);
     form.reset();
 });
+
+
+deleteButton.addEventListener(`click`, () => {
+    data.splice(randomNumberCard, 1);
+    questionArea.innerHTML = "";
+});
+
