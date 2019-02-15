@@ -1,0 +1,44 @@
+input {
+    outline: none;
+    margin-left: 20px;
+    border: 1px solid grey;
+    height: 20px;
+    width: 300px;
+}
+
+.container-for-buttons {
+    display: flex;
+}
+
+.add-card {
+    margin: 0 auto;
+}
+
+button {
+    outline: none;
+    background-color: black;
+    color: white;
+    height: 50px;
+    width: 150px;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+main {
+    width: 80%;
+    margin: auto;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+
+.submit-form {
+    display: block;
+    margin: auto;
+}
