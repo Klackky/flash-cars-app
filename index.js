@@ -10,7 +10,7 @@ let randomNumberCard;
 nextButton.onclick = function nextCard () {
     randomNumberCard = Math.floor(Math.random()*data.length)
     questionArea.innerHTML = data[randomNumberCard].question
- 
+
 }
 
 // flip button
@@ -24,9 +24,10 @@ flipButton.onclick = function flipCard() {
 const form = document.querySelector(`form`);
 const questionField = document.querySelector(`#question`);
 const answerField = document.querySelector(`#answer`);
-let card = {};
+const deleteButton = document.querySelector(`delete`);
 
 const createCard = () => {
+    let card = {};
     card.question = questionField.value;
     card.answer = answerField.value;
     data.push(card);
@@ -36,5 +37,6 @@ const createCard = () => {
 form.addEventListener(`submit`, (event) => {
     event.preventDefault();
     createCard();
+    console.log(data);
     form.reset();
 });
