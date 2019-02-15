@@ -61,4 +61,7 @@ select {
 #flash-card {
     text-align: center;
     padding-top: 30%;
+
+#smile {
+    display: none;
 }
