@@ -16,18 +16,11 @@ const data = [
 
 
 const nextButton = document.getElementsByClassName("next")[0]
+const questionArea = document.getElementById("flash-card")
 
 nextButton.onclick = function nextCard () {
-    const question = document.createElement('h2')
-    // console.log(question)
     const randomNumber = Math.floor(Math.random()*data.length)
-    // console.log(randomNumber)
-    question.innerHTML = data[randomNumber].question
-    // console.log(question.innerHTML)
-    const flashCardSection = document.getElementById("flash-card")
-    flashCardSection.appendChild(question)
-    // console.log(flashCardSection)
-
+    questionArea.innerHTML = data[randomNumber].question
 }
 
 
