@@ -1,3 +1,5 @@
+const data =[];
+
 
 // next button
 const nextButton = document.getElementById("next")
