@@ -1,26 +1,21 @@
-const data = [
-    {
-        question: `do you have an answer?`,
-        answer: `no`
-    },
-    {
-        question: `How are you?`,
-        answer: `good`
-    },
-    {
-        question: `Is it Friday?`,
-        answer: `yes`
-    }
 
-]
-
-
-const nextButton = document.getElementsByClassName("next")[0]
+// next button
+const nextButton = document.getElementById("next")
+console.log(nextButton)
 const questionArea = document.getElementById("flash-card")
+let randomNumberCard;
 
 nextButton.onclick = function nextCard () {
-    const randomNumber = Math.floor(Math.random()*data.length)
-    questionArea.innerHTML = data[randomNumber].question
+    randomNumberCard = Math.floor(Math.random()*data.length)
+    questionArea.innerHTML = data[randomNumberCard].question
+ 
 }
+
+// flip button
+const flipButton = document.getElementById('flip')
+flipButton.onclick = function flipCard() {
+    questionArea.innerHTML = data[randomNumberCard].answer
+}
+
 
 
